@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Array {
     private int[] elements;
     private int size = 0;
@@ -15,7 +13,7 @@ public class Array {
 
     public void removeAt(int position) {
         if(position > size) {
-            System.out.print("Element does not exist");
+            throw new IllegalArgumentException();
         }
         for(int i = position; i < size - 1; i++) {
             elements[i] = elements[i + 1];
